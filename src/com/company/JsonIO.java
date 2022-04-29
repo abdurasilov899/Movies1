@@ -31,7 +31,7 @@ public class JsonIO {
     }
 
     public static List<Movies> getMovies() {
-        Map<String, List<Movies>> moviesMap = GSON.fromJson(readJson("movies.json"),
+        Map<String, List<Movies>> moviesMap = GSON.fromJson(readJson("src/movies.json"),
                 new TypeToken<Map<String, List<Movies>>>() {
         }.getType());
 

@@ -10,11 +10,47 @@ public class Main {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) throws InputException {
-//        while (true) {
-//            start();
-//        }
-    }
 
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            commads();
+
+            int a = scanner.nextInt();
+
+            if (a == 1) {
+                System.out.println("все категории фильмов");
+                s.printAllMovies(movies);
+            } else if (a == 2) {
+                System.out.print("write movies name: ");
+                String input = in.nextLine();
+                s.findMovie(movies, input);
+            } else if (a == 3) {
+                System.out.println("отсортированы по годам: ");
+                s.sortByYear(movies);
+            } else if (a == 4) {
+                System.out.println("отсортированы по названию: ");
+                s.sortByName(movies);
+            } else if (a == 5) {
+                System.out.println("отсортированы по алфавитному порядку директора: ");
+                s.sortByDirector(movies);
+            } else if (a == 6) {
+                System.out.print("write actor's name: ");
+                f.findMoviesByActor(movies, in.nextLine());
+            } else if (a == 7) {
+                System.out.println("write director's name");
+                f.findMoviesByDirector(movies, in.nextLine());
+            } else if (a == 8) {
+                System.out.println("write years");
+                f.findMoviesByYear(movies, in.nextInt());
+            } else if (a == 9) {
+                System.out.println("write actor name");
+                f.findMoviesAndRoleByActor(movies, in.nextLine());
+            } else if (a == 10) {
+                System.out.println("актер с ролями: ");
+                f.showActorRoles(movies);
+            }
+        }
+    }
 
     static void commads() {
         System.out.println("--------------Commands-----------------------");

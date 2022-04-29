@@ -6,7 +6,7 @@ public interface SortAble {
 
     void printAllMovies(List<Movies> movies);
 
-    void findMovie(List<Movies> movies);
+    void findMovie(List<Movies> movies,String in);
 
     void sortByYear(List<Movies> movies);
 
